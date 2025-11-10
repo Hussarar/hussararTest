@@ -19,7 +19,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import hussmod.hussarTest;
 import hussmod.item.ItemExampleArmor;
 import hussmod.potion.PotionExample;
-import hussmod.recipe.RecipeExample;
 
 @Mod.EventBusSubscriber(modid = hussarTest.MODID)
 public class ModRegistry {
@@ -45,11 +44,6 @@ public class ModRegistry {
                         exampleLeggings,
                         exampleBoots
                 );
-        }
-
-        @SubscribeEvent
-        public static void registerRecipeEvent(RegistryEvent.Register<IRecipe> event) {
-                event.getRegistry().register(new RecipeExample().setRegistryName(new ResourceLocation(hussarTest.MODID, "example")));
         }
 
         @SubscribeEvent
